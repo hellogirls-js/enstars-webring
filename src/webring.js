@@ -4,6 +4,7 @@ async function createWebringNav() {
 
   const jsonRes = await fetch("/src/sites.json");
   const sitesData = await jsonRes.json();
+  console.log(sitesData);
   
   const currentSiteIndex = sitesData.findIndex((site) => site.site_url === window.location.href);
 
