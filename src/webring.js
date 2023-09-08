@@ -1,8 +1,8 @@
 async function createWebringNav() {
-  const res = await fetch("/src/webring.html");
+  const res = await fetch("https://cdn.jsdelivr.net/gh/hellogirls-js/enstars-webring/src/webring.html");
   const webringHTML = await res.text();
 
-  const jsonRes = await fetch("/src/sites.json");
+  const jsonRes = await fetch("https://cdn.jsdelivr.net/gh/hellogirls-js/enstars-webring/src/webring.json");
   const sitesData = await jsonRes.json();
   console.log(sitesData);
   
