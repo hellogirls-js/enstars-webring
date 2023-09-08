@@ -1,0 +1,205 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  #webring__nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #webring__nav-menu {
+    width: 60%;
+    margin: auto;
+    background-image: linear-gradient(#5f9094, #52888d);
+    border-radius: 0px 0px 20px 20px;
+    padding: 5px;
+    padding-bottom: 8px;
+    border: 2px solid #fff;
+    border-top: none;
+    box-shadow: 2px 2px 3px #00000066;
+  }
+
+  #webring__nav-menu-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .webring__nav-button-cont {
+    position: relative;
+  }
+
+  .webring__tooltip {
+    display: none;
+    position: absolute;
+    left: -40px;
+    bottom: -55px;
+    background-color: #224955dd;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .webring__nav-button-cont:hover .webring__tooltip {
+    display: block;
+  }
+
+  .webring__nav-menu-button {
+    background-color: #fff;
+    color: #3c6470;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 1px #00000033;
+  }
+
+  .webring__nav-button-cont:hover .webring__nav-menu-button {
+    background-color: #c2153a;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  .webring__nav-menu-button i {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .webring__nav-menu-button img {
+    width: 130px;
+    height: auto;
+    margin-left: -30px;
+    margin-top: -20px;
+  }
+
+  .webring__nav-menu-button#webring__expand {
+    background-color: transparent;
+    display: block;
+    overflow: clip;
+    border: 3px solid #adcfbf;
+  }
+
+  #webring__expand:hover {
+    background-color: transparent;
+  }
+
+  #webring__nav-content {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 20px 20px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+
+  #webring__nav-content h2 {
+    text-align: left;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: #3d726f;
+  }
+
+  #webring__nav-content a:link, #webring__nav-content a:visited {
+    color: #0a86d8;
+  }
+
+  #webring__nav-subtitle {
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0px 5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #webring__nav-subtitle strong {
+    color: #fff;
+  }
+
+  .webring__site-list-item {
+    padding: 6px;
+  }
+
+  .webring__site-list-item a:link, .webring__site-list-item a:visited {
+    color: #c2153a !important;
+    text-decoration: none;
+  }
+
+  .webring__site-list-item.webring__site-list-even {
+    background-color: #ffeaef;
+  }
+
+  @media screen and (max-width: 700px) {
+    #webring__nav-container {
+      width: 94vw;
+    }
+
+    #webring__nav-menu {
+      width: 100%;
+    }
+  }
+
+</style>
+<div id="webring__nav-container">
+  <div id="webring__nav-menu">
+    <div id="webring__nav-menu-cont">
+      <div class="webring__nav-button-cont">
+      <div class="webring__nav-menu-button" id="webring__prev">
+        <i class="ti ti-chevron-left"></i>
+      </div>
+      <div class="webring__tooltip">
+        previous site
+      </div>
+    </div>
+    
+    <div class="webring__nav-button-cont">
+      <div class="webring__nav-menu-button" id="webring__list">
+        <i class="ti ti-list"></i>
+      </div>
+      <div class="webring__tooltip">
+        list all sites
+      </div>
+    </div>
+    
+    <div class="webring__nav-button-cont">
+      <div class="webring__nav-menu-button" id="webring__expand">
+        <img src="/src/card_full1_3132_evolution.png" />
+      </div>
+      <div class="webring__tooltip">
+        about this webring
+      </div>
+    </div>
+    
+    <div class="webring__nav-button-cont">
+      <div class="webring__nav-menu-button" id="webring__random">
+        <i class="ti ti-arrows-shuffle-2"></i>
+      </div>
+      <div class="webring__tooltip">
+        i'm feeling lucky!
+      </div>
+    </div>
+    
+    <div class="webring__nav-button-cont">
+      <div class="webring__nav-menu-button" id="webring__next">
+        <i class="ti ti-chevron-right"></i>
+      </div>
+      <div class="webring__tooltip">
+        next site
+      </div>
+    </div>
+    </div>
+    <div id="webring__nav-subtitle">
+      <strong>Now viewing:</strong>
+      <span id="webring__nav-subtitle-name"></span> by <span id="webring__nav-subtitle-credit"></span>
+    </div>
+    <div id="webring__nav-content">
+    </div>
+  </div>
+  
+</div>
