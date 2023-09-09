@@ -13,7 +13,7 @@ async function createWebringNav() {
     webringDiv.innerHTML = webringHTML;
 
     document.body.style.margin = 0;
-    document.body.style.paddingTop = "12vh";
+    document.body.style.paddingTop = "16vh";
     document.body.prepend(webringDiv);
 
     document.getElementById("webring__nav-subtitle-name").innerHTML = sitesData[currentSiteIndex].site_name;
