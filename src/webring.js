@@ -35,7 +35,7 @@ async function createWebringNav() {
     document.getElementById("webring__expand").onclick = () => {
       document.getElementById("webring__nav-content").style.display = document.getElementById("webring__nav-content").style.display === "block" ? "none" : "block";
       document.getElementById("webring__nav-content").innerHTML = `<h2>about this webring</h2>
-      <p>this webring is managed by <a href="https://twitter.com/hellogirls_DEV">son</a>. want to add a website to this ring? <a href="">submit your site here!</a></p>`;
+      <p>this webring is managed by <a href="https://twitter.com/hellogirls_DEV">son</a>. want to add a website to this ring? <a href="https://forms.gle/1DCz3XzNDE3NeQc47">submit your site here!</a></p>`;
     }
 
     document.getElementById("webring__random").onclick = () => {
