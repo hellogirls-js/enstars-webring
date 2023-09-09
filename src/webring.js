@@ -1,8 +1,8 @@
 async function createWebringNav() {
-  const res = await fetch("https://cdn.jsdelivr.net/gh/hellogirls-js/enstars-webring/src/webring.html");
+  const res = await fetch("https://webring.hellogirls.info/src/webring.html");
   const webringHTML = await res.text();
 
-  const jsonRes = await fetch("https://cdn.jsdelivr.net/gh/hellogirls-js/enstars-webring/src/webring.json");
+  const jsonRes = await fetch("https://webring.hellogirls.info/src/webring.json");
   const sitesData = await jsonRes.json();
   console.log(sitesData);
   
@@ -15,6 +15,9 @@ async function createWebringNav() {
     document.body.style.margin = 0;
     document.body.style.paddingTop = "12vh";
     document.body.prepend(webringDiv);
+
+    document.getElementById("webring__nav-subtitle-name").innerHTML = sitesData[currentSiteIndex].site_name;
+    document.getElementById("webring__nav-subtitle-credit").innerHTML = `<a href=${sitesData[currentSiteIndex].author_credit}>${sitesData[currentSiteIndex].author_name}</a>`;
     
     document.getElementById("webring__prev").onclick = () => {
       window.location.href = sitesData[currentSiteIndex === 0 ? sitesData.length - 1 : currentSiteIndex - 1].site_url;
